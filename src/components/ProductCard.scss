@@ -1,0 +1,137 @@
+// Imports 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+
+// Variabile
+
+// --Breakpointuri
+$layout-breakpoint-small:500px;
+$layout-breakpoint-medium:800px;
+$layout-breakpoint-large:1200px;
+// --Colors
+$dark-cyan: hsl(158, 36%, 37%);
+$cream:hsl(30, 38%, 92%);
+$very-dark-blue:hsl(212, 21%, 14%);
+$dark-grayish-blue:hsl(228, 12%, 48%);
+$white :hsl(0, 0%, 100%);
+// --Fonts
+$font-Montserrat:'Montserrat',sans-serif;
+$font-Fraunces:'Fraunces',sans-serif;
+
+.product{
+    background-color: white;
+    width: 90%;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 100px rgba(14, 110, 148, 0.596);
+    // Imaginea produsului
+    @media (min-width: $layout-breakpoint-medium){
+        display: flex;
+        height: 55vh;
+        max-width: 680px;
+    }
+
+     @media (min-width: $layout-breakpoint-large){
+        display: flex;
+        height: 55vh;
+        max-width: 800px;
+    }
+    & .product-img{
+     background-image: url('../images/image-product-mobile.jpg');
+     background-size: cover;
+     background-repeat: no-repeat;
+     height: 40vh;
+     border-radius: 1rem 1rem 0 0;
+
+      @media (min-width: $layout-breakpoint-medium){
+       min-width: 50%;
+       height: 100%;
+       background-image: url('../images/image-product-desktop.jpg');
+       border-radius: 1rem 0 0 1rem;
+     
+    }
+    }
+
+    & .product-description{
+        padding: 1.2rem;
+
+        @media (min-width: $layout-breakpoint-medium){
+       width: 50%;
+       height: 100%;
+       padding: 2rem;
+    }
+
+        & .product-subtitle{
+            color: $dark-grayish-blue;
+            letter-spacing: .5ch;
+            text-transform: uppercase;
+            font-family: $font-Montserrat;
+            font-weight: 500;
+        }
+
+        
+        & .product-title{
+            color:$very-dark-blue;
+            font-family: $font-Fraunces;
+            padding: 1rem 1rem 1rem 0;
+
+              @media (min-width: $layout-breakpoint-medium){
+               padding: 2rem 4rem 1rem 0; 
+             }
+        }
+
+        & .product-description-text{
+            color: $dark-grayish-blue;
+            font-family: $font-Montserrat;
+            padding: 0 0.4rem 1rem 0;
+            line-height: 1.4;
+            font-size: 14px;
+
+              @media (min-width: $layout-breakpoint-medium){
+               padding: 0rem 3rem 1rem 0; 
+             }
+        }
+    }
+
+    & .product-price{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem 0;
+
+        & .product-new-price{
+            font-family: $font-Fraunces;
+            color: $dark-cyan;
+            font-size: xx-large;
+        }
+
+        
+        & .product-old-price{
+            text-decoration: line-through;
+            color: $dark-grayish-blue;
+            font-family: $font-Montserrat;
+        }
+    }
+
+    & .product-add-to-cart{
+              @media (min-width: $layout-breakpoint-medium){
+               padding: 3rem 0
+             }
+        & .add-to-cart-btn{
+            width: 100%;
+            padding: 1rem;
+            border-radius: .5rem;
+            border: none;
+            background-color: $dark-cyan;
+            color: $white;
+            font-family: $font-Montserrat;
+            font-weight: 700;
+            transition: all .5s ease-in;
+            cursor: pointer;
+
+            &:hover{
+                background-color:hsl(158, 36%, 24%) ;
+            }
+        }
+    }
+}
+

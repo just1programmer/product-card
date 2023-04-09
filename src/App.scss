@@ -1,0 +1,27 @@
+*,::before,::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+$layout-breakpoint-small:500px;
+$layout-breakpoint-medium:800px;
+$layout-breakpoint-large:1200px;
+
+
+.app{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem 0;
+    // background-color: aliceblue;
+    background: url('https://cdn.dribbble.com/users/941157/screenshots/14969085/media/e1b71b3fa3df9446c89597fc8a56f881.jpg?compress=1&resize=1000x750&vertical=top');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+    @media (min-width: $layout-breakpoint-medium){
+      align-items: center;
+    }
+}
+
